@@ -1,3 +1,5 @@
+package javax;
+
 public class BinarySearch {
   public int search(int[] arr, int key) {
     return search(arr, key, 0, arr.length - 1);
@@ -15,7 +17,7 @@ public class BinarySearch {
     else {
       if (key < arr[pivot]) h = pivot -1;
       else l = pivot +1;
-      
+
       return search(arr, key, l, h);
     }
   }
