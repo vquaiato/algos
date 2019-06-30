@@ -18,12 +18,19 @@ public class MyLinkedList {
   public void add(Object data) {
     ListNode node = new ListNode(data, this.head);
     this.head = node;
+
+    if (this.tail == null)
+      this.tail = node;
   }
 
   public void tailAdd(Object data) {
     ListNode node = new ListNode(data);
-    this.tail.next = node;
-    this.tail = node;
+    if (this.tail == null)
+      this.tail = this.head = node;
+    else {
+      this.tail.next = node;
+      this.tail = node;
+    }
   }
 
   public Object removeHead() {

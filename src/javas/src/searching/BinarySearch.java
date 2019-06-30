@@ -1,4 +1,4 @@
-package javax;
+package searching;
 
 public class BinarySearch {
   public int search(int[] arr, int key) {

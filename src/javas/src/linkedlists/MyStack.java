@@ -22,13 +22,13 @@ public class MyStack {
     return null;
   }
 
-  public static void main(String[] args) {
-    MyStack stack = new MyStack();
-    stack.push("world");
-    stack.push("hello ");
+  // public static void main(String[] args) {
+  //   MyStack stack = new MyStack();
+  //   stack.push("world");
+  //   stack.push("hello ");
 
-    while (!stack.isEmpty()){
-      System.out.print(stack.pop());
-    }
-  }
+  //   while (!stack.isEmpty()){
+  //     System.out.print(stack.pop());
+  //   }
+  // }
 }

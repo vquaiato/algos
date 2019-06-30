@@ -1,3 +1,5 @@
+package strings;
+
 public class MyPalindrome {
   public static Boolean check(String toCheck) {
     char[] toCheckCharArray = toCheck.toCharArray();
