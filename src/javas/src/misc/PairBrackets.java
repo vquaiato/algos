@@ -20,7 +20,7 @@ public class PairBrackets {
       else if (c == '}' || c == ']' || c == ')') {
         var item = stack.pop();
     
-        if (!c.toString().equalsIgnoreCase(correctPair(item)))
+        if (!c.toString().equalsIgnoreCase(correctPair(item.toString())))
           return false;
       }
     }

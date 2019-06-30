@@ -8,7 +8,7 @@ public class MyQueue {
   }
 
   public Boolean isEmpty() {
-    return this.list.head == null;
+    return this.list.isEmpty();
   }
 
   public void enqueue(Object item) {

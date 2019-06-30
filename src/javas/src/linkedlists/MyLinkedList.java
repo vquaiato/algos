@@ -39,6 +39,10 @@ public class MyLinkedList {
     return data;
   }
 
+  public Boolean isEmpty(){
+    return this.head == null;
+  }
+
   public void print() {
     var node = this.head;
     while (node != null) {
@@ -46,13 +50,4 @@ public class MyLinkedList {
       node = node.next;
     }
   }
-
-  // public static void main(String[] args) {
-  // MyLinkedList list = new MyLinkedList(10);
-
-  // for (int i = 11; i < 21; i++)
-  // list.tailAdd(i);
-
-  // list.print();
-  // }
 }

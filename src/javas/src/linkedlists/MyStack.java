@@ -8,27 +8,27 @@ public class MyStack {
   }
 
   public Boolean isEmpty() {
-    return this.list.head == null;
+    return this.list.isEmpty();
   }
 
-  public void push(String data) {
+  public void push(Object data) {
     this.list.add(data);
   }
 
-  public String pop() {
+  public Object pop() {
     if (!this.isEmpty())
       return this.list.removeHead().toString();
 
     return null;
   }
 
-  // public static void main(String[] args) {
-  //   MyStack stack = new MyStack();
-  //   stack.push("world");
-  //   stack.push("hello ");
+  public static void main(String[] args) {
+    MyStack stack = new MyStack();
+    for(int i=1;i<=10;i++)
+      stack.push(i);
 
-  //   while (!stack.isEmpty()){
-  //     System.out.print(stack.pop());
-  //   }
-  // }
+    while (!stack.isEmpty()){
+      System.out.print(stack.pop());
+    }
+  }
 }
