@@ -1,26 +1,35 @@
-package javax.linkedlists;
+package linkedlists;
 
 public class MyLinkedList {
   ListNode head = null;
   ListNode tail = null;
 
+  public MyLinkedList() {
+  }
+
   public MyLinkedList(ListNode first) {
     this.tail = this.head = first;
   }
 
-  public MyLinkedList(int firstValue) {
+  public MyLinkedList(Object firstValue) {
     this(new ListNode(firstValue));
   }
 
-  public void add(int data) {
+  public void add(Object data) {
     ListNode node = new ListNode(data, this.head);
     this.head = node;
   }
 
-  public void tailAdd(int data) {
+  public void tailAdd(Object data) {
     ListNode node = new ListNode(data);
     this.tail.next = node;
     this.tail = node;
+  }
+
+  public Object removeHead() {
+    var data = this.head.data;
+    this.head = this.head.next;
+    return data;
   }
 
   public void print() {
@@ -31,12 +40,12 @@ public class MyLinkedList {
     }
   }
 
-  public static void main(String[] args) {
-    MyLinkedList list = new MyLinkedList(10);
+  // public static void main(String[] args) {
+  // MyLinkedList list = new MyLinkedList(10);
 
-    for (int i = 11; i < 21; i++)
-      list.tailAdd(i);
+  // for (int i = 11; i < 21; i++)
+  // list.tailAdd(i);
 
-    list.print();
-  }
+  // list.print();
+  // }
 }

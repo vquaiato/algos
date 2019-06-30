@@ -1,3 +1,8 @@
+package misc;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Rotate {
   public static int[] rotLeft(int[] a, int d) {
     int len = a.length;
