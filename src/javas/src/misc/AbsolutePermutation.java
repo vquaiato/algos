@@ -14,13 +14,6 @@ public class AbsolutePermutation {
         for(i=0;i<n;i++) res[i] = i+1;
         return res;
       }
-      else if(k==1){
-        while(i<n){
-          res[i] = i+2;
-          res[i+1] = i+1;
-          i+=2;
-        }
-      }
       
       HashSet<Integer> seen = new HashSet<Integer>();
       while(i<n){
@@ -40,7 +33,7 @@ public class AbsolutePermutation {
   }
 
   public static void main(String[] args){
-    for(int i : absolutePermutation(10, 5))
+    for(int i : absolutePermutation(10, 1))
       System.out.print(i + " ");
   }
 }
