@@ -82,31 +82,27 @@ public class MyMinHeap{
 
   public static void main(String[] args) throws Exception {
     MyMinHeap minHeap = new MyMinHeap();
-    minHeap.add(10);
-    minHeap.add(2);
-    minHeap.add(5);
-    minHeap.add(6);
     minHeap.add(3);
+    minHeap.add(5);
+    minHeap.add(7);
+    minHeap.add(9);
+    minHeap.add(2);
+    
+    minHeap.printHeap();
+    System.out.println(minHeap.remove());
+
     minHeap.add(1);
+    minHeap.add(12);
 
     minHeap.printHeap();
+    System.out.println(minHeap.remove());
 
-    minHeap.remove();
     minHeap.printHeap();
+    System.out.println(minHeap.remove());
 
-    minHeap.remove();
     minHeap.printHeap();
+    System.out.println(minHeap.remove());
 
-    minHeap.remove();
-    minHeap.printHeap();
-
-    minHeap.remove();
-    minHeap.printHeap();
-
-    minHeap.remove();
-    minHeap.printHeap();
-
-    minHeap.remove();
     minHeap.printHeap();
   }
 }
