@@ -1,50 +1,42 @@
 package strings;
 
-import java.util.*;
-
 public class WeightedStrings {
 
-  public String calc(Long target){
-    return solve(target, ""); 
-  }
-
-  private String solve(Long target, String res){
-    if(target == 0) return res;
-    
-    Character c = weights().get(target);
-    if(c!=null) return c.toString() + res;
-
-    Long i = target;
-    while(c == null){
-      i--; c = weights().get(i);
-    }
-      
-    return solve(target - i, c.toString() + res);
-  }
-  private HashMap<Long, Character> internalWeights;
-  public HashMap<Long, Character> weights(){
+  private Long[] internalWeights;
+  public Long[] weights(){
     if(internalWeights == null){
-      internalWeights = new HashMap<Long, Character>(26);
+      internalWeights = new Long[27];
+      internalWeights[0] = Long.MIN_VALUE;
 
-      internalWeights.put(Long.valueOf(1), (char)65);
-      long prev = 1;
-      for(int i=2; i<= 26;i++){
-        long current = i*prev + prev;
-  
-        Character c = (char)(65 + i-1);
-        internalWeights.put(current, c);
-  
-        prev = current;
-        // System.out.println(c + " -> " + current);
-      }
+      internalWeights[1] = Long.valueOf(1);
+      for(int i=2; i<= 26;i++)
+        internalWeights[i] =(i*internalWeights[i-1]) + internalWeights[i-1];
     }
 
     return internalWeights;
   }
 
+  public String calc(Long target) {
+    return solve(target, 1, ""); 
+  }
+
+  private String solve(Long target, int lastPos, String res) {
+    if(target == 0) return res;
+    
+    if(weights()[lastPos] == target)
+      return Character.valueOf((char)(64 + lastPos)) + res;
+
+    while(weights()[lastPos] <= target && lastPos < weights().length)
+      lastPos++;
+
+    while(weights()[lastPos] > target && lastPos > 0)
+      lastPos--;
+    
+    return solve(target - weights()[lastPos], lastPos, Character.valueOf((char)(64 + lastPos)) + res);
+  }
   public static void main(String[] args) {
     WeightedStrings ws = new WeightedStrings();
-    Long target = Long.valueOf(20);
+    Long target = Long.valueOf(100);
     System.out.print("Target: " + target + " = " + ws.calc(target));
   }
 }
