@@ -1,12 +1,13 @@
 package misc;
 
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class TrappingRainWater {
   public int trap(int[] h) {
     if (h.length < 3) return 0;
 
-    Stack<Integer> s = new Stack<>();
+    Deque<Integer> s = new ArrayDeque<Integer>();
     int current = h[0];
     int total = 0;
 
@@ -17,8 +18,9 @@ public class TrappingRainWater {
         while (!s.isEmpty()) { total += (current - s.pop()); }
         current = h[i];
       }
-
-      if (i == h.length - 1 && !s.isEmpty()) {
+    }
+    
+    if (!s.isEmpty()) {
         int ch = s.pop();
         if(ch < current)
           current = ch;
@@ -29,7 +31,6 @@ public class TrappingRainWater {
           else { current = ch; }
         }
       }
-    }
 
     return total;
   }
@@ -43,7 +44,7 @@ public class TrappingRainWater {
     //5,4,3,2,1
     //5,4,3,2,1,5
 
-    int r = t.trap(new int[] {5,4,3,2,1,5});
+    int r = t.trap(new int[] {0, 1, 0, 2, 1, 0, 1, 1, 2, 1, 2, 1});
     System.out.println(r);
   }
 }
