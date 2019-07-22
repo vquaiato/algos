@@ -34,8 +34,6 @@ public class MergeRanges {
     }
     result.add(nextRange);
     int[][] r = new int[result.size()][2];
-    // r = result.toArray(r);
-
     return result.toArray(r);
   }
 

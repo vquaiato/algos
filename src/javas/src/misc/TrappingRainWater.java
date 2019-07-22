@@ -44,7 +44,7 @@ public class TrappingRainWater {
     //5,4,3,2,1
     //5,4,3,2,1,5
 
-    int r = t.trap(new int[] {0, 1, 0, 2, 1, 0, 1, 1, 2, 1, 2, 1});
+    int r = t.trap(new int[] {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1});
     System.out.println(r);
   }
 }
