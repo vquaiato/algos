@@ -1,4 +1,6 @@
-package leetcode;
+// https://leetcode.com/problems/min-stack/
+
+package linkedlists;
 
 class MyNode{
   int data;
@@ -14,7 +16,6 @@ public class MinStack {
     MyNode head;
     MyNode mins;
   
-    /** initialize your data structure here. */
     public MinStack() {
     }
     
