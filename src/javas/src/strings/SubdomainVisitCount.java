@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/subdomain-visit-count/
-package misc.arrays;
+package strings;
 
 import java.util.*;
 
