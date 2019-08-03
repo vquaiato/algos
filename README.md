@@ -20,4 +20,5 @@ To quick access the exercises by category:
    - [arrays](/src/javas/src/misc/arrays)
  - [searching](src/javas/src/searching)
  - [strings](src/javas/src/strings)
+ - [trees](src/javas/src/trees)
  
