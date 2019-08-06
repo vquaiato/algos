@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/move-zeroes/
 
-package misc.arrays;
+package arrays;
 
 public class MoveZeroes{
   public void moveZeroes(int[] nums){

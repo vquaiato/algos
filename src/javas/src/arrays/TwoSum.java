@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/two-sum
 
-package misc.arrays;
+package arrays;
 
 import java.util.Hashtable;
 
@@ -11,7 +11,7 @@ public class TwoSum {
     int[] res = new int[2];
     
     for(int i=0; i<nums.length;i++){
-        Object seenIx = seen.get(target - nums[i]);
+        Integer seenIx = seen.get(target - nums[i]);
         
         if(seenIx!=null)
         {

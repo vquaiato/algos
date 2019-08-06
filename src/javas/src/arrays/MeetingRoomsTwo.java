@@ -1,6 +1,6 @@
 //https://leetcode.com/problems/meeting-rooms-ii/
 
-package misc.arrays;
+package arrays;
 
 import java.util.Arrays;
 import java.util.List;

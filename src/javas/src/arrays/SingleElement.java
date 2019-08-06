@@ -4,7 +4,7 @@
 // then I realised it should be solved in O(logn)
 // the idea I used was to "binary search" the elements
 
-package misc.arrays;
+package arrays;
 
 import java.util.*;
 

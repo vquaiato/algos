@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/island-perimeter/
 
-package misc.arrays;
+package arrays;
 
 public class IslandPerimeter{
   public int islandPerimeter(int[][] grid) {

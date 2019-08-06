@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/plus-one/
 
-package misc.arrays;
+package arrays;
 
 public class PlusOne{
   public int[] plusOne(int[] digits){

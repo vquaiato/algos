@@ -1,4 +1,4 @@
-package misc;
+package arrays;
 
 import java.util.PriorityQueue;
 

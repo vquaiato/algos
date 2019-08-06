@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/reorder-log-files/
 
-package misc.arrays;
+package arrays;
 
 import java.util.Comparator;
 import java.util.LinkedList;

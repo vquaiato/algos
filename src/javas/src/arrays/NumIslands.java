@@ -1,4 +1,4 @@
-package misc.arrays;
+package arrays;
 
 public class NumIslands {
   public int numIslands(String[][] grid) {

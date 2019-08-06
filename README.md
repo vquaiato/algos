@@ -17,7 +17,7 @@ To quick access the exercises by category:
  - [heaps](/src/javas/src/heaps)
  - [linked lists](/src/javas/src/linkedlists)
  - [misc](/src/javas/src/misc)
-   - [arrays](/src/javas/src/misc/arrays)
+ - [arrays](/src/javas/src/arrays)
  - [searching](src/javas/src/searching)
  - [strings](src/javas/src/strings)
  - [trees](src/javas/src/trees)

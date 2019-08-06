@@ -1,4 +1,4 @@
-package misc.arrays;
+package arrays;
 
 public class SumDigitsMinNumber{
   public int sum(int[] numbers){
