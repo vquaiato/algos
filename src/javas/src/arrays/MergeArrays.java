@@ -1,4 +1,4 @@
-package misc;
+package arrays;
 
 public class MergeArrays {
   public int[] merge(int[] arr1, int m, int[] arr2, int n) {
