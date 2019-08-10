@@ -12,14 +12,14 @@ public class ComparingVersionNumbers {
       String p2 = i < parts2.length ? parts2[i] : "0";
   
       int j = 0, c1 = 0, c2 = 0;
-      while (j< Math.max(p1.length(), p2.length())) {
-        int k1 = j;
-        while (k1 < p1.length())
-          c1 += c1 * 10 + (p1.charAt(k1++) - '0');
+      while (j >= 0) {
+        int k1 = p1.length()-1;
+        while (k1 >=0)
+          c1 += (p1.charAt(k1) - '0') * Math.pow(10, p1.length() - k1-- - 1);
   
-        int k2 = j;
-        while (k2 < p2.length())
-          c2 += c2 * 10 + (p2.charAt(k2++) - '0');
+        int k2 = p2.length()-1;
+        while (k2 >= 0)
+          c2 += (p2.charAt(k2) - '0') * Math.pow(10, p2.length() - k2-- - 1);
           
         j = Math.max(k1,k2);
           
@@ -32,8 +32,8 @@ public class ComparingVersionNumbers {
   }
 
   public static void main(String[] args) {
-    // String v1 = "1.2";
-    // String v2 = "1.10";
+    String v1 = "1.2";
+    String v2 = "1.10";
 
     // String v1 = "1.1";
     // String v2 = "1.10";
@@ -44,8 +44,8 @@ public class ComparingVersionNumbers {
     // String v1 = "1.01";
     // String v2 = "1.1";
 
-    String v1 = "1";
-    String v2 = "1.1";
+    // String v1 = "1";
+    // String v2 = "1.1";
 
     // String v1 = "1.0";
     // String v2 = "1.0.0";
